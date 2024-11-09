@@ -1,26 +1,34 @@
-import React from 'react'
+// src/components/TableMain.js
+import React from 'react';
 
+/*
+ * Componente TableMain
+ */
 const TableMain = ({ data }) => {
-    console.log(data)
-    if (data === null) {
-        return <p>No data available.</p>
-    }
-    return (
-        <table className="table table-striped-columns p-2">
-            {data.map((datas, index) => (
-                <tbody key={index}>
-                    <tr>
-                        <th scope="row">Id:</th>
-                        <td>{datas.id}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Data:</th>
-                        <td>{datas.data}</td>
-                    </tr>
-                </tbody>
-            ))}
-        </table>
-    )
-}
+  if (!data || data.length === 0) {
+    return <p>No data available.</p>;
+  }
 
-export default TableMain
+  return (
+    <div className="table-container">
+      <table className="table table-striped p-3">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((datas) => (
+            <tr key={datas.id}>
+              <td>{datas.id}</td>
+              <td>{datas.data}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default TableMain;

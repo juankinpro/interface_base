@@ -1,0 +1,32 @@
+/* Estilo para la página About */
+.about-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .about-container h1 {
+    color: #333;
+    font-size: 2rem;
+  }
+  
+  .about-container p {
+    color: #555;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+  
+  .link-back {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .link-back:hover {
+    background-color: #0056b3;
+  }
+  
